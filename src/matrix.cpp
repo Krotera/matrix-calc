@@ -2,17 +2,17 @@
  * Matrix Calculator
  * 2018-01-23
  * Copyright (C) 2018 Krotera
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
@@ -32,7 +32,7 @@
  * Takes a string expression, "input", with two matrices, prompting the user  *
  * to re-enter it in part or in whole if it can't be understood, uses the     *
  * other functions to carry out the expression, and returns its result or     *
- * an error message as a string                                              *
+ * an error message as a string                                               *
  ******************************************************************************/
 std::string take_input(std::string& input) {
     std::string A_string, B_string;
@@ -49,7 +49,7 @@ std::string take_input(std::string& input) {
     //            std::cout << "input_match.str(" << k << "): " << input_match.str(k) << std::endl;
     //        }
     //    }
-    
+
     // Check input and prompt for re-entry if bad
     while (!(std::regex_search(input, input_match, input_regex))
             || (input_match.size() != 4)
@@ -114,7 +114,7 @@ bool string_to_matrix(const std::string& input, std::vector<std::vector<double>>
     auto s_end = std::sregex_iterator();
 
     /*
-     * Populate new_matrix by calling populate_matrix_row_from_string for each 
+     * Populate new_matrix by calling populate_matrix_row_from_string for each
      * comma-separated number sequence, keeping track of the length of subsequent rows and...
      */
     if (std::distance(s_begin, s_end) > 0) {
@@ -199,7 +199,7 @@ int populate_matrix_row_from_string(std::vector<std::vector<double>>&matrixIn, c
  * Carries out an addition, subtraction, or multiplication (based on the      *
  * operator char "op") on two matrices "A" and "B" (in the order A +/-/* B)   *
  * and throws an exception if the matrices are empty or incompatible for the  *
- * given operation                                                            * 
+ * given operation                                                            *
  ******************************************************************************/
 void operate_matrices(const char& op, const std::vector<std::vector<double>>&A,
         const std::vector<std::vector<double>>&B, std::vector<std::vector<double>>&C) {

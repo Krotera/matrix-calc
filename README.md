@@ -1,7 +1,7 @@
 # Matrix Calculator
 
 ## Background
-This command line utility adds, subtracts, or multiplies two matrices.
+This command line utility adds (`+`), subtracts (`-`), or multiplies (`*`) two matrices.
 
 ## Instructions
 In Linux, with g++ installed, run `make` in the `src` directory and then either:
